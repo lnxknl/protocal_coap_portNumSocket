@@ -61,7 +61,7 @@ void setup() {
 	
 	//local side of socket
 	pSocket->EpLocal.NetType = IPV4;
-	pSocket->EpLocal.NetPort = LocalPort;
+	pSocket->EpLocal.NetPort = LocalPort;// @NOTE 
 	
 	//remote side of socket
 	pSocket->EpRemote.NetType = IPV4;

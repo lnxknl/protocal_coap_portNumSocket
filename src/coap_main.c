@@ -357,7 +357,7 @@ CoAP_Socket_t* CoAP_NewSocket(SocketHandle_t handle) {
 	return socket;
 }
 
-static void handleServerInteraction(CoAP_Interaction_t* pIA) {
+static void handleServerInteraction(CoAP_Interaction_t* pIA) {// @NOTE 
 	if (pIA->State == COAP_STATE_HANDLE_REQUEST ||
 			pIA->State == COAP_STATE_RESOURCE_POSTPONE_EMPTY_ACK_SENT ||
 			pIA->State == COAP_STATE_RESPONSE_WAITING_LEISURE) {
@@ -681,7 +681,7 @@ static void handleClientInteraction(CoAP_Interaction_t* pIA) {
 }
 
 //must be called regularly
-void _rom CoAP_doWork() {
+void _rom CoAP_doWork() {// @NOTE 
 	CoAP_Interaction_t* pIA = CoAP_GetLongestPendingInteraction();
 
 	if (pIA == NULL) {
